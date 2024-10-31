@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigned Mini-Project</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+  <body>
+    <header class="bg-primary-custom text-white p-3">
+      <div class="container">
+        <h1 class="mb-0">Aalto Srl</h1>
+      </div>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="filters p-3 bg-light rounded">
+            <h3 class="text-center">FILTERS</h3>
+
+            <!-- Barra di ricerca con lente a sinistra come nel mock-up che mi avete fornito-->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-secondary" id="searchBtn">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+              <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Search..."
+              />
+            </div>
+
+            <label
+              class="form-label mb-3 text-left"
+              style="color: #003479; font-weight: bold"
+              >COMPLETED</label
+            >
+            <!-- Filtro realizzato come un toggle switch -->
+            <div class="form-group d-flex align-items-center">
+              <label for="completedFilter" class="mr-2">NO</label>
+              <input
+                type="checkbox"
+                id="completedFilter"
+                class="toggle-switch"
+              />
+            </div>
+
+            <!-- Select User ID come dropdown -->
+            <div class="form-group">
+              <label for="userIdFilter" class="text-left">SELECT USER ID</label>
+              <select id="userIdFilter" class="form-control">
+                <!-- Opzioni User ID popolate dinamicamente -->
+              </select>
+            </div>
+
+            <button
+              id="resetFilters"
+              class="btn btn-link"
+              style="text-decoration: underline"
+            >
+              Reset filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabella sulla destra che si riempirà con i dati dell'Api fetchata dal file JavaScript -->
+        <div class="col-md-9">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="color: #003479">USER ID</th>
+                <th style="color: #003479">TITLE</th>
+                <th style="color: #003479">COMPLETED</th>
+              </tr>
+            </thead>
+            <tbody id="todoTableBody">
+              <!-- Righe dei "Todo/elementi dell'API" popolate dinamicamente -->
+            </tbody>
+          </table>
+
+          <!-- Paginazione  -->
+          <nav>
+            <ul id="pagination" class="pagination justify-content-center">
+              <!-- Elementi della paginazione -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark-custom text-white text-center py-3 mt-4">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod
+        tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrum exercitationem ullamco
+      </p>
+    </footer>
+
+    <script src="functionality.js"></script>
+  </body>
+</html>
